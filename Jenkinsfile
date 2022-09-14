@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('git-clone - Sithabile'){
         steps{
-            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/Team3-G4-Techops/Techops-Parallel-Job.git']]])
+            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-id', url: 'https://github.com/Stha-Rog/Jenkins-Master-slave.git']]])
         }
     }
      stage('parallel-job 1'){
