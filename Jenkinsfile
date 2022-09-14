@@ -42,6 +42,11 @@ pipeline{
           }
         }
         stage('sub-job2 - Wille'){
+          agent {
+            label {
+              label 'slave2'
+            }
+          }
           steps{
             sh 'ps -ef'
           }
